@@ -1,0 +1,25 @@
+ecommerce_app/
+│
+├── main.py
+├── database.py
+├── models.py
+├── schemas.py
+├── crud.py
+│
+└── routers/
+      users.py
+      products.py
+      orders.py
+
+
+
+
+      Purpose of each file:
+
+File	    --Purpose
+main.py     --FastAPI entry point
+database.py	--Database connection
+models.py	--Database tables
+schemas.py	--Request/response models
+crud.py	    --Database logic
+routers/	--API endpoints
