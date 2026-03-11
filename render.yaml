@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: ecommerce-api
+    runtime: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: fastapi run main.py --host 0.0.0.0 --port $PORT
+    envVars:
+      - key: DATABASE_URL
+        sync: false
+      - key: GROQ_API_KEY
+        sync: false

@@ -1,14 +1,13 @@
 # agent.py
+import os
+from dotenv import load_dotenv
 from dataclasses import dataclass
 from typing import Any
 from pydantic_ai.models.groq import GroqModel
 from pydantic_ai.providers.groq import GroqProvider
-from dotenv import load_dotenv
 from pydantic import BaseModel
 from pydantic_ai import Agent, RunContext
 from sqlalchemy.orm import Session
-import os
-
 from models import Product, User
 
 load_dotenv()
