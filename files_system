@@ -6,7 +6,7 @@ ecommerce_app/
 ├── schemas.py
 ├── crud.py
 │
-└── routers/
+└── routers
       users.py
       products.py
       orders.py

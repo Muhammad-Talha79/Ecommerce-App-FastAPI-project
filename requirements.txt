@@ -3,4 +3,18 @@ uvicorn==0.25.0
 SQLAlchemy==2.0.20
 pydantic==2.6.2
 python-jose==3.3.0
+
+# FIX: passlib[argon2] is what hashing.py uses (CryptContext with argon2 scheme)
+# argon2-cffi is the underlying C library that passlib depends on — both are needed
+passlib[argon2]==1.7.4
 argon2-cffi==23.1.0
+
+# FIX: python-multipart is required for OAuth2PasswordRequestForm (form data parsing)
+python-multipart==0.0.9
+
+# FIX: email-validator is required for Pydantic's EmailStr field in schemas
+email-validator==2.1.1
+
+# FIX: pydantic-ai and python-dotenv were used in agent.py but missing from requirements
+pydantic-ai==0.0.13
+python-dotenv==1.0.1
